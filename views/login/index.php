@@ -1,3 +1,4 @@
+<?php Session::init(); ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -6,6 +7,9 @@
     <?php require 'views/layouts/style.php' ?>
   </head>
   <body>
+    <?php if(Session::get('loggedIn') == true): ?>
+    <?php header('location: dashboard'); ?>
+    <?php else: ?>
     <?php require 'views/layouts/nav.php' ?>
     <h1>Login Form</h1>
     <form action="login/login" method="post">
@@ -16,5 +20,6 @@
       <input type="submit" value="login">
     </form>
     <?php require 'views/layouts/footer.php' ?>
+  <?php endif; ?>
   </body>
 </html>
