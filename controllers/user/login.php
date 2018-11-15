@@ -7,7 +7,7 @@ class login extends BaseController
     parent::__construct();
   }
   public function index(){
-    $this->view->render('login/index');
+    $this->view->render('user/login/index');
   }
   public function login(){
     $this->model->login();

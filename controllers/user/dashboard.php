@@ -13,7 +13,7 @@ class dashboard extends BaseController
     }
   }
   public function index(){
-    $this->view->render('dashboard/index');
+    $this->view->render('user/dashboard/index');
   }
   public function logout(){
     Session::destroy();
